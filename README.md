@@ -16,5 +16,5 @@
 # 
 
 # 项目说明
-1、调用方式参考`DateTypeServiceTest`,支持批量获取一批日期的日期类型
+1、调用方式[参考](https://github.com/albin504/china-date-type/blob/master/src/test/java/DateTypeServiceTest.java),支持批量获取一批日期的日期类型
 2、
