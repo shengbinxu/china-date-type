@@ -20,7 +20,7 @@
 3. 该配置已经过大厂生产项目验证，数据很可靠。
 
 # 使用方式
-1、引入maven依赖
+1、引入maven依赖 (兼容jdk8以上版本)
 ```
 <dependency>
     <groupId>io.github.albin504</groupId>
