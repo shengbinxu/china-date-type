@@ -25,6 +25,18 @@ public class DateTypeService {
         loadConf();
     }
 
+    /**
+     * 获取某一天的日期类型：工作日、周末、节假日调休、法定节假日
+     *
+     * @param date
+     * @return
+     */
+    public DateTypeEnum getDateType(Date date) throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+        String dateStr = formatter.format(date);
+        return getDateType(Integer.parseInt(dateStr));
+    }
+
 
     /**
      * 获取某一天的日期类型：工作日、周末、节假日调休、法定节假日
@@ -71,6 +83,20 @@ public class DateTypeService {
     public Map<Integer, DateTypeEnum> batchGetDateType(int[] dateList) throws ParseException {
         Map<Integer, DateTypeEnum> result = new HashMap<>();
         for (int date : dateList) {
+            result.put(date, getDateType(date));
+        }
+        return result;
+    }
+
+    /**
+     * 批量获取一批日期的类型：工作日、周末、节假日调休、法定节假日
+     *
+     * @param dateList
+     * @return
+     */
+    public Map<Date, DateTypeEnum> batchGetDateType(Date[] dateList) throws ParseException {
+        Map<Date, DateTypeEnum> result = new HashMap<>();
+        for (Date date : dateList) {
             result.put(date, getDateType(date));
         }
         return result;

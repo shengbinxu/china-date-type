@@ -9,14 +9,14 @@ public class DateTypeConf {
     public Integer[] legal_holidays;
 
     public List<Integer> getWorkDays() {
-        return List.of(work_days);
+        return Arrays.asList(work_days);
     }
 
     public List<Integer> getHolidays() {
-        return List.of(holidays);
+        return Arrays.asList(holidays);
     }
 
     public List<Integer> getLegalHolidays() {
-        return List.of(legal_holidays);
+        return Arrays.asList(legal_holidays);
     }
 }
